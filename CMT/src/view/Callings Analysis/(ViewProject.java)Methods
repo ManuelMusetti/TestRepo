@@ -1,0 +1,249 @@
+
+Declaration-0)	INIT()	CALLS:
+*  JFrame("Commonality Mining Tool")
+*  JMenuBar()
+*  Thread(this)
+
+Declaration-1)	ViewProject(ModelProject modelProject)	CALLS:
+*  frameProject.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+*  frameProject.setExtendedState(JFrame.MAXIMIZED_BOTH)
+*  frameProject.setLocationRelativeTo(null)
+*  frameProject.setLayout(null)
+*  frameProject.setJMenuBar(menu)
+
+Declaration-2)	run()	CALLS:
+*  JLabel("Analysing inut files...")
+*  jl1.setBounds(new Rectangle(20,10,250,30))
+*  ImageIcon("./src/DATA/Throbber/throbber.gif")
+*  JLabel()
+*  jl2.setBounds(new Rectangle(270,10,35,35))
+*  jl2.setIcon(i)
+*  JFrame("Extracting commonalities...")
+*  jf.setLayout(null)
+*  jf.setBackground(Color.WHITE)
+*  jf.setBounds(550, 375, 380, 80)
+*  jf.add(jl1)
+*  jf.add(jl2)
+*  jf.setVisible(true)
+*  jf.repaint()
+*  jf.setVisible(false)
+*  jf.dispose()
+
+Declaration-3)	setStateThrobber(boolean b)	CALLS:
+
+Declaration-4)	addListener(ControllerProject controllerProject)	CALLS:
+*  JMenuItem("Create Project")
+*  menuProjectC.addActionListener(controllerProject)
+*  JMenuItem("Delete Project")
+*  menuProjectD.addActionListener(controllerProject)
+*  menuProjectD.setEnabled(false)
+*  JMenuItem("Load Project")
+*  menuProjectL.addActionListener(controllerProject)
+*  JMenuItem("Save Project")
+*  menuProjectS.addActionListener(controllerProject)
+*  menuProjectS.setEnabled(false)
+*  JMenuItem("Exit")
+*  menuProjectE.addActionListener(controllerProject)
+*  JMenu("Project")
+*  menuProject.add(menuProjectC)
+*  menuProject.add(menuProjectD)
+*  menuProject.addSeparator()
+*  menuProject.add(menuProjectL)
+*  menuProject.add(menuProjectS)
+*  menuProject.addSeparator()
+*  menuProject.add(menuProjectE)
+*  menu.add(menuProject)
+*  JButton("Create Project")
+*  buttonProjectCP.addActionListener(controllerProject)
+*  buttonProjectCP.setBounds(new Rectangle(10,10,105,50))
+*  JButton("Save Project")
+*  buttonProjectSP.addActionListener(controllerProject)
+*  buttonProjectSP.setBounds(new Rectangle(160,10,105,50))
+*  buttonProjectSP.setEnabled(false)
+*  JButton("Load File")
+*  buttonProjectLF.addActionListener(controllerProject)
+*  buttonProjectLF.setBounds(new Rectangle(310,10,105,50))
+*  buttonProjectLF.setEnabled(false)
+*  JButton("Extract Commonality")
+*  buttonProjectEC.addActionListener(controllerProject)
+*  buttonProjectEC.setBounds(new Rectangle(460,10,165,50))
+*  buttonProjectEC.setEnabled(false)
+*  frameProject.add(buttonProjectCP)
+*  frameProject.add(buttonProjectSP)
+*  frameProject.add(buttonProjectLF)
+*  frameProject.add(buttonProjectEC)
+*  JMenuItem("Delete File")
+*  menuTree.addActionListener(controllerProject)
+*  JPopupMenu("Men� Tree")
+*  menuTreeProject.add(menuTree)
+*  ViewPanelLateral(menuTreeProject)
+*  JButton("OK")
+*  buttonCommonalitiesEnd.setBounds(430, 530, 80, 30)
+*  buttonCommonalitiesEnd.addActionListener(controllerProject)
+*  ViewPanelCentral(buttonCommonalitiesEnd)
+*  frameProject.addWindowListener(controllerProject)
+*  frameProject.setVisible(true)
+
+Declaration-5)	update(Observable os, Object o)	CALLS:
+*  equals("End Extract Commonalities")
+*  frameProject.setEnabled(true)
+*  setStateThrobber(true)
+*  buttonProjectEC.setEnabled(false)
+*  panelLateralProject.setAnalysisLeafTree()
+*  File("./src/DATA/Sound/analysis.wav")
+*  AudioSystem.getAudioInputStream(f)
+*  DataLine.Info(Clip.class, ais.getFormat())
+*  Clip)
+*  AudioSystem.getLine(info)
+*  clip.open(ais)
+*  clip.start()
+*  System.out.println("Exception update: " + ex.getMessage())
+*  System.out.println("Exception update: " + ex.getMessage())
+*  System.out.println("Exception update: " + ex.getMessage())
+*  equals("End Commonalities Selected")
+*  panelCentralProject.refreshTabCommonalitesSelected(
+					modelProject.readPathCommonalitiesSelectedHTML())
+*  frameProject.remove(panelCentralProject.getPanelAnalysis())
+*  frameProject.add(panelCentralProject.getPanelAnalysis())
+*  frameProject.repaint()
+
+Declaration-6)	assignNameProjectDialog()	CALLS:
+*  JTextField()
+*  JOptionPane.showOptionDialog(new JFrame("Create Project"),
+		            o1, "",
+		            JOptionPane.YES_NO_OPTION, JOptionPane.DEFAULT_OPTION, null,
+		            o2, o2[1])
+*  jtf.getText()
+*  s.trim()
+*  equals("")
+*  errorDialog("You did not put a name to the project")
+*  errorDialog("You did not put a name to the project")
+
+Declaration-7)	deleteProjectDialog()	CALLS:
+*  JFrame("Delete Project")
+*  JOptionPane.showOptionDialog(
+				f, "Do you want delete the project?", "Delete Project", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[1])
+*  modelProject.deleteProject()
+*  frameProject.remove(panelLateralProject.getPanelTree())
+*  frameProject.remove(panelCentralProject.getPanelAnalysis())
+*  ViewPanelLateral(menuTreeProject)
+*  ViewPanelCentral(buttonCommonalitiesEnd)
+*  frameProject.repaint()
+*  frameProject.repaint()
+
+Declaration-8)	loadProjectDialog()	CALLS:
+*  FileDialog(new JFrame("Load File"))
+*  d.setMode(FileDialog.LOAD)
+*  d.setFilenameFilter(new FilterFileProject())
+*  d.setDirectory(".")
+*  d.setVisible(true)
+*  getFile()
+*  buttonProjectEC.isEnabled()
+*  buttonProjectEC.setEnabled(true)
+*  d.getFile()
+*  toString()
+
+Declaration-9)	saveProjectDialog()	CALLS:
+*  JFrame("Save Project")
+*  JOptionPane.showOptionDialog(
+				f, "Do you want save the project?", "Save Project", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[1])
+
+Declaration-10)	loadFileDialog()	CALLS:
+*  FileDialog(new JFrame("Load File"))
+*  d.setMode(FileDialog.LOAD)
+*  d.setFilenameFilter(new FilterFileInput())
+*  d.setDirectory(".")
+*  d.setVisible(true)
+*  getFile()
+*  d.getFile()
+*  toString()
+*  d.getDirectory()
+*  d.getFile()
+*  toString()
+*  buttonProjectEC.isEnabled()
+*  buttonProjectEC.setEnabled(true)
+*  panelLateralProject.addNodeInput(s[0])
+*  errorDialog("The file" + s[0] + " has been inserted")
+*  frameProject.repaint()
+
+Declaration-11)	deleteFiledDialog()	CALLS:
+*  JFrame("Delete File")
+*  JOptionPane.showOptionDialog(
+				f, "Do you want delete the file?", "Delete File", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[1])
+*  panelLateralProject.deleteNodeInput()
+*  anelLateralProject.getAnalysisLeafTree()
+*  size()
+*  buttonProjectEC.setEnabled(false)
+
+Declaration-12)	extractCommonalitiesdDialog()	CALLS:
+*  JFrame("Extract Commonalities")
+*  JOptionPane.showOptionDialog(
+				f, "Do you want extract commonalities from the file?", "Extract Commonalities", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[1])
+*  modelProject.analyzesFileProject()
+*  setStateThrobber(false)
+*  throbber.start()
+*  frameProject.setEnabled(false)
+*  frameProject.repaint()
+
+Declaration-13)	errorDialog(String s)	CALLS:
+*  JFrame("Error")
+*  JOptionPane.showOptionDialog(
+				f, s, "Error", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0])
+
+Declaration-14)	loadPanelLateral(String s, ArrayList <String> al)	CALLS:
+*  frameProject.remove(panelLateralProject.getPanelTree())
+*  frameProject.remove(panelCentralProject.getPanelAnalysis())
+*  ViewPanelLateral(menuTreeProject)
+*  ViewPanelCentral(buttonCommonalitiesEnd)
+*  panelLateralProject.createTree(s)
+*  panelLateralProject.getTree()
+*  addMouseListener(controllerProject)
+*  buttonProjectSP.setEnabled(true)
+*  buttonProjectLF.setEnabled(true)
+*  menuProjectD.setEnabled(true)
+*  menuProjectS.setEnabled(true)
+*  frameProject.add(panelLateralProject.getPanelTree())
+*  frameProject.repaint()
+*  frameProject.remove(panelLateralProject.getPanelTree())
+*  frameProject.remove(panelCentralProject.getPanelAnalysis())
+*  ViewPanelLateral(menuTreeProject)
+*  ViewPanelCentral(buttonCommonalitiesEnd)
+*  panelLateralProject.loadTree(s, al)
+*  panelLateralProject.getTree()
+*  addMouseListener(controllerProject)
+*  panelLateralProject.setAnalysisLeafTree(
+	    			modelProject.loadAnalysisFileProject())
+*  buttonProjectSP.setEnabled(true)
+*  buttonProjectLF.setEnabled(true)
+*  menuProjectD.setEnabled(true)
+*  menuProjectS.setEnabled(true)
+*  frameProject.add(panelLateralProject.getPanelTree())
+*  frameProject.repaint()
+
+Declaration-15)	loadPanelCentral()	CALLS:
+*  panelLateralProject.getAnalysisLeaf()
+*  panelCentralProject.createTabFile(
+						modelProject.readAnalysisFile(i), modelProject.readTermRelevantFile(i))
+*  frameProject.remove(panelCentralProject.getPanelAnalysis())
+*  frameProject.add(panelCentralProject.getPanelAnalysis())
+*  frameProject.repaint()
+*  panelCentralProject.createTabCommonalities(
+						modelProject.readPathHTMLTermRelevantFile(), modelProject.readCommonalitiesCandidates(), modelProject.readCommonalitiesSelected(), modelProject.readPathCommonalitiesSelectedHTML())
+*  frameProject.remove(panelCentralProject.getPanelAnalysis())
+*  frameProject.add(panelCentralProject.getPanelAnalysis())
+*  frameProject.repaint()
+
+Declaration-16)	showCommonalitiesSelected()	CALLS:
+*  modelProject.setCommonalitiesSelected(
+				panelCentralProject.getNameCheckBoxCommonalities())
+
+Declaration-17)	closeProject()	CALLS:
+*  frameProject.dispose()
+*  System.exit(0)
+
+Declaration-18)	accept(File dir, String name)	CALLS:
+*  name.endsWith( ".pdf" )
+*  name.endsWith(".txt")
+
+Declaration-19)	accept(File dir, String name)	CALLS:
+*  name.endsWith( ".xml" )

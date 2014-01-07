@@ -1,0 +1,64 @@
+
+Declaration-0)	INIT()	CALLS:
+
+Declaration-1)	ModelParserUTF8(String pathFile, String pathProject)	CALLS:
+*  String(pathProject + "/" + new File(pathFile).getName().substring(0, new File(pathFile).getName().length() - 4) + ".txt")
+
+Declaration-2)	filterFile()	CALLS:
+*  File(pathFileUTF8)
+*  cleanString(encodeFileToStringUTF8())
+*  PrintStream(
+            				new FileOutputStream(pathFileUTF8),false,"UTF-8")
+*  ps.print(textUTF8)
+*  ps.close()
+*  System.out.println("Exception filterFile: " + ex.getMessage())
+*  System.out.println("Exception filterFile: " + ex.getMessage())
+
+Declaration-3)	readPathFile()	CALLS:
+
+Declaration-4)	readPathFileUTF8()	CALLS:
+
+Declaration-5)	readTextUTF8()	CALLS:
+
+Declaration-6)	encodeFileToStringUTF8()	CALLS:
+*  File(pathFile)
+*  athFile.substring(pathFile.length() - 4, pathFile.length())
+*  equals(".pdf")
+*  PDFParser(new FileInputStream(f))
+*  pp.parse()
+*  String(
+	            		new PDFTextStripper().getText(
+	            			new PDDocument(pp.getDocument())).getBytes(),"UTF-8")
+*  System.out.println("Exception encodeFileToStringUTF8: " + e.getMessage())
+*  System.out.println("Exception encodeFileToStringUTF8: " + e.getMessage())
+*  BufferedReader(
+				        		new FileReader(f.getAbsolutePath()))
+*  reader.readLine()
+*  String(s2.getBytes(), "UTF-8")
+*  reader.close()
+*  System.out.println("Exception encodeFileToStringUTF8: " + e.getMessage())
+*  System.out.println("Exception encodeFileToStringUTF8: " + e.getMessage())
+
+Declaration-7)	cleanString(String s)	CALLS:
+*  Pattern.compile("-\\s")
+*  Pattern.compile("(http|www)[a-zA-Z0-9\\-\\.\\_\\?\\!\\&\\:\\/\\%\\-\\+\\=]+")
+*  Pattern.compile("http[a-zA-Z0-9\\-\\.\\_\\?\\!\\&\\:\\/\\%\\s\\-\\=]+\\s")
+*  Pattern.compile("[^a-zA-Z0-9\\-\\.\\_\\-\\,\\;\\?\\!\\s\\(\\)\\:\\/\\%]")
+*  Pattern.compile("(\\..)[\\.]+")
+*  Pattern.compile("\\.[\\s]+")
+*  Pattern.compile("\\s[\\s]+")
+*  p0.matcher(s)
+*  m.replaceAll("")
+*  p1.matcher(s)
+*  m.replaceAll(" ")
+*  p2.matcher(s)
+*  m.replaceAll(" ")
+*  p3.matcher(s)
+*  m.replaceAll(" ")
+*  p4.matcher(s)
+*  m.replaceAll(" ")
+*  s.replaceAll("\n", " ")
+*  p5.matcher(s)
+*  m.replaceAll(".\n")
+*  p6.matcher(s)
+*  m.replaceAll(" ")

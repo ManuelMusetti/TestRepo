@@ -1,0 +1,22 @@
+
+Declaration-0)	INIT()	CALLS:
+*  String>()
+*  String>()
+
+Declaration-1)	startElement(String uri, String localName, String gName, Attributes attributes)	CALLS:
+*  Name.equals("root")
+*  Name.equals("node")
+*  Name.equals("leaf")
+
+Declaration-2)	characters(char [] ch, int start, int length)	CALLS:
+*  pathInput.add(new String(ch,start,length))
+*  nameInput.add(new String(ch, start, length))
+
+Declaration-3)	endElement(String uri, String localName, String gName)	CALLS:
+*  Name.equals("root")
+*  Name.equals("node")
+*  Name.equals("leaf")
+
+Declaration-4)	readPathInput()	CALLS:
+
+Declaration-5)	readNameFile()	CALLS:

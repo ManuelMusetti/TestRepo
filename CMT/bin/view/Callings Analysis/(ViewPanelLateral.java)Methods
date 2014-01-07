@@ -1,0 +1,128 @@
+
+Declaration-0)	INIT()	CALLS:
+*  JPanel()
+*  String>()
+
+Declaration-1)	ViewPanelLateral(JPopupMenu menuTree)	CALLS:
+*  panelTree.setLayout(null)
+*  panelTree.setBounds(new Rectangle(18,115,300,585))
+*  panelTree.setBorder(BorderFactory.createCompoundBorder(
+				BorderFactory.createEtchedBorder(EtchedBorder.RAISED), 
+						BorderFactory.createEtchedBorder(EtchedBorder.LOWERED)))
+
+Declaration-2)	createTree(String s)	CALLS:
+*  length()
+*  DefaultMutableTreeNode(s)
+*  rootTree.add(new DefaultMutableTreeNode("Input"))
+*  rootTree.add(new DefaultMutableTreeNode("Commonality"))
+*  DefaultTreeModel(rootTree)
+*  JTree(graficTree)
+*  treeProject.setBounds(5,5,290,575)
+*  treeProject.setCellRenderer(new ColorTree(s, rootTree, analysisLeafTree))
+*  treeProject.addMouseListener(
+				new MouseAdapter()
+				{			
+						@Override
+						public void mouseClicked(MouseEvent me) 
+						{							
+							clickNodeTree(me);
+							
+							if(me.getButton() == 3)
+								showMenuTree(tmp, me);
+						}
+				})
+*  panelTree.removeAll()
+*  panelTree.add(treeProject)
+
+Declaration-3)	loadTree(String s, ArrayList <String> al)	CALLS:
+*  DefaultMutableTreeNode(s)
+*  rootTree.add(new DefaultMutableTreeNode("Input"))
+*  rootTree.add(new DefaultMutableTreeNode("Commonality"))
+*  DefaultTreeModel(rootTree)
+*  JTree(graficTree)
+*  treeProject.setBounds(5,5,290,575)
+*  treeProject.setCellRenderer(new ColorTree(s, rootTree, analysisLeafTree))
+*  treeProject.addMouseListener(
+				new MouseAdapter()
+				{			
+						@Override
+						public void mouseClicked(MouseEvent me) 
+						{							
+							clickNodeTree(me);
+							
+							if(me.getButton() == 3)
+								showMenuTree(tmp, me);
+						}
+				})
+*  al.size()
+*  graficTree.insertNodeInto(
+					new DefaultMutableTreeNode(al.get(i)), (MutableTreeNode) rootTree.getChildAt(0), rootTree.getChildAt(0).getChildCount())
+*  analysisLeafTree.add("NO")
+*  panelTree.removeAll()
+*  panelTree.add(treeProject)
+
+Declaration-4)	addNodeInput(String s)	CALLS:
+*  rootTree.getChildAt(0)
+*  getChildCount()
+*  ootTree.getChildAt(0)
+*  getChildAt(i)
+*  toString()
+*  equals(s.toString())
+*  graficTree.insertNodeInto(
+				new DefaultMutableTreeNode(s), (MutableTreeNode) rootTree.getChildAt(0), rootTree.getChildAt(0).getChildCount())
+*  analysisLeafTree.add("NO")
+
+Declaration-5)	deleteNodeInput()	CALLS:
+*  DefaultMutableTreeNode)
+*  selectNode.getLastPathComponent()
+*  rootTree.getChildAt(0)
+*  getChildCount()
+*  ootTree.getChildAt(0)
+*  getChildAt(i)
+*  toString()
+*  equals(dmtn.toString())
+*  graficTree.removeNodeFromParent(dmtn)
+*  analysisLeafTree.remove(i)
+
+Declaration-6)	getAnalysisLeaf()	CALLS:
+*  selectNode.getLastPathComponent()
+*  DefaultMutableTreeNode)
+*  selectNode.getLastPathComponent()
+*  ootTree.getChildAt(1)
+*  toString()
+*  equals(dmtn.toString())
+*  rootTree.getChildAt(0)
+*  getChildCount()
+*  ootTree.getChildAt(0)
+*  getChildAt(i)
+*  toString()
+*  equals(dmtn.toString())
+
+Declaration-7)	getPanelTree()	CALLS:
+
+Declaration-8)	getTree()	CALLS:
+
+Declaration-9)	getAnalysisLeafTree()	CALLS:
+
+Declaration-10)	setAnalysisLeafTree()	CALLS:
+*  analysisLeafTree.size()
+*  analysisLeafTree.set(i, "YES")
+
+Declaration-11)	setAnalysisLeafTree(ArrayList <String> al)	CALLS:
+*  al.size()
+*  analysisLeafTree.set(Integer.valueOf(al.get(i)), "YES")
+
+Declaration-12)	clickNodeTree(MouseEvent me)	CALLS:
+*  treeProject.getPathForLocation(me.getX(), me.getY())
+*  treeProject.setSelectionPath(selectNode)
+
+Declaration-13)	showMenuTree(String s, MouseEvent me)	CALLS:
+*  selectNode.getLastPathComponent()
+*  selectNode.getLastPathComponent()
+*  toString()
+*  selectNode.getLastPathComponent()
+*  toString()
+*  selectNode.getLastPathComponent()
+*  toString()
+*  menuTree.show(me.getComponent(), me.getX(), me.getY())
+*  me.consume()

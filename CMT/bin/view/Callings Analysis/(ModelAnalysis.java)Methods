@@ -1,0 +1,160 @@
+
+Declaration-0)	INIT()	CALLS:
+
+Declaration-1)	ModelAnalysis(String pathFile, String pathProject)	CALLS:
+*  super(pathFile, pathProject)
+
+Declaration-2)	loadAnalysisFile()	CALLS:
+*  String>()
+*  String>()
+*  pathPageHTML.add(
+					new String(
+							readPathFileUTF8().substring(0, readPathFileUTF8().length()-4) + i +".html"))
+*  BufferedReader(
+            				new FileReader(
+            						readPathFileUTF8().substring(0, readPathFileUTF8().length()-4) + ".log"))
+*  s = br.readLine())
+*  s.equals("")
+*  s.equals("\n")
+*  s.equals(" ")
+*  termRelevant.add(s)
+*  br.close()
+*  System.out.println("Exception LoadAnalysis: " + ex.getMessage())
+*  System.out.println("Exception LoadAnalysis: " + ex.getMessage())
+*  Collections.sort(termRelevant)
+
+Declaration-3)	runAnalysisFile()	CALLS:
+*  String>()
+*  ilterFile()
+*  al = (ArrayList <String>) connectAnalysis())
+*  al.size()
+*  al.get(i)
+*  URL(s1)
+*  HttpURLConnection)
+*  url.openConnection()
+*  huc.setRequestMethod("GET")
+*  huc.setDoOutput(true)
+*  huc.setDoInput(true)
+*  DataOutputStream(
+                				huc.getOutputStream())
+*  dot.close()
+*  BufferedReader(
+                				new InputStreamReader(huc.getInputStream()))
+*  br.readLine()
+*  br.close()
+*  checkAnalysis(s2)
+*  huc.disconnect()
+*  Thread.sleep(10000)
+*  cleanHTML(s2)
+*  PrintWriter(
+                            		new BufferedWriter(
+                            				new FileWriter(
+                            						readPathFileUTF8().substring(0, readPathFileUTF8().length()-4) + i +".html", false)))
+*  pw.print(s4)
+*  pw.close()
+*  pathPageHTML.add(
+                    		readPathFileUTF8().substring(0, readPathFileUTF8().length()-4) + i +".html")
+*  File(
+                        				readPathFileUTF8().substring(0, readPathFileUTF8().length()-4) + i +".html")
+*  extractTermRelevant(f)
+*  huc.disconnect()
+*  System.out.println("Exception RunAnalysis: " + ex.getMessage())
+*  System.out.println("Exception RunAnalysis: " + ex.getMessage())
+*  System.out.println("Exception RunAnalysis: " + ex.getMessage())
+*  System.out.println("Exception RunAnalysis: " + ex.getMessage())
+
+Declaration-4)	readPathFileHTML()	CALLS:
+
+Declaration-5)	readTermRelevant()	CALLS:
+
+Declaration-6)	connectAnalysis()	CALLS:
+*  ArrayList<String>()
+*  URLEncoder.encode(readTextUTF8(), "UTF-8")
+*  URL(URL_ANALYSIS)
+*  HttpURLConnection)
+*  url.openConnection()
+*  huc.setRequestMethod("POST")
+*  huc.setRequestProperty("Content-lenght", String.valueOf(query.length()))
+*  huc.setDoOutput(true)
+*  huc.setDoInput(true)
+*  DataOutputStream(
+            				huc.getOutputStream())
+*  dos.writeBytes(query)
+*  dos.close()
+*  BufferedReader(
+            				new InputStreamReader(huc.getInputStream()))
+*  br.readLine()
+*  br.close()
+*  returnJid(s1)
+*  System.out.println("Error not find yid")
+*  al.add((URL_ANALYSIS + s3))
+*  al.add((URL_ANALYSIS + s3 + "&tmid=tm_sentence_splitter"))
+*  al.add((URL_ANALYSIS + s3 + "&tmid=tm_term_extractor"))
+*  al.add((URL_ANALYSIS + s3 + "&tmid=tm_parser"))
+*  huc.disconnect()
+*  System.out.println("Exception ConnectionAnalysis: " + ex.getMessage())
+*  System.out.println("Exception ConnectionAnalysis: " + ex.getMessage())
+*  System.out.println("Exception ConnectionAnalysis: " + ex.getMessage())
+
+Declaration-7)	returnJid(String s)	CALLS:
+*  s.equals("")
+*  s.indexOf("jid=")
+*  charAt(i)
+*  String.valueOf(s.charAt(i))
+
+Declaration-8)	checkAnalysis(String s)	CALLS:
+*  s.equals("")
+*  indexOf("<meta HTTP-EQUIV")
+
+Declaration-9)	cleanHTML(String s)	CALLS:
+*  System.out.println("Error not find page html")
+*  s.indexOf("<table")
+*  s.indexOf("<center>")
+*  s.indexOf("</center>")
+*  s.indexOf("</p>")
+*  s.substring(0, i1)
+*  s.substring(i2, i3)
+*  s.substring(i4, s.length())
+
+Declaration-10)	extractTermRelevant(File f)	CALLS:
+*  String>()
+*  Pattern.compile("<[^<]+?>")
+*  Pattern.compile("\\s[\\s]+")
+*  Pattern.compile("\\s[0-9]+\\s")
+*  Pattern.compile("\\s[0-9.]+%\\s")
+*  Pattern.compile("\\s[I][D]\\s")
+*  BufferedReader(
+            				new FileReader(f.getPath()))
+*  s1 = reader.readLine())
+*  reader.close()
+*  es1.matcher(s2)
+*  m.replaceAll("\n")
+*  es2.matcher(s2)
+*  m.replaceAll(" ")
+*  es3.matcher(s2)
+*  m.replaceAll(" %% ")
+*  es4.matcher(s2)
+*  m.replaceAll(" ")
+*  es5.matcher(s2)
+*  m.replaceAll("%%")
+*  s2.split("%%")
+*  s3[i].equals("")
+*  s3[i].equals("\n")
+*  s3[i].equals(" ")
+*  s3[i].equals(" ")
+*  s3[i].trim()
+*  equals(s4[0])
+*  s3[i].trim()
+*  equals(s4[1])
+*  s3[i].trim()
+*  equals(s4[2])
+*  termRelevant.add(s3[i].trim())
+*  Collections.sort(termRelevant)
+*  PrintWriter(
+                    		new BufferedWriter(
+                    				new FileWriter(readPathFileUTF8().substring(0, readPathFileUTF8().length()-4) + ".log")))
+*  termRelevant.size()
+*  writer.print(termRelevant.get(j) + "\n")
+*  writer.close()
+*  System.out.println("Exception extractTermRelevant: " + e.getMessage())
+*  System.out.println("Exception extractTermRelevant: " + e.getMessage())

@@ -1,0 +1,14 @@
+
+Declaration-0)	INIT()	CALLS:
+
+Declaration-1)	ModelFile(String pathFile, String pathProject)	CALLS:
+*  super(pathFile, pathProject)
+
+Declaration-2)	run()	CALLS:
+*  File(readPathFileUTF8())
+*  exists()
+*  new File(readPathFileUTF8()).lastModified() > new File(readPathFile()).lastModified())
+*  oadAnalysisFile()
+*  unAnalysisFile()
+
+Declaration-3)	readResult()	CALLS:

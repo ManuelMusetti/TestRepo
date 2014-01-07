@@ -1,0 +1,36 @@
+
+Declaration-0)	INIT()	CALLS:
+*  String>()
+*  ImageIcon("./src/DATA/Tree/folder.gif")
+*  ImageIcon("./src/DATA/Tree/squarer.gif")
+*  ImageIcon("./src/DATA/Tree/squareg.gif")
+
+Declaration-1)	ColorTree(String nameTree, DefaultMutableTreeNode rootTree, ArrayList <String> analysisNodeTree)	CALLS:
+
+Declaration-2)	getTreeCellRendererComponent( JTree tree,
+						Object value, boolean bSelected, boolean bExpanded,
+								boolean bLeaf, int iRow, boolean bHasFocus )	CALLS:
+*  DefaultMutableTreeNode)
+*  String)
+*  node.getUserObject()
+*  abelText.equals(nameTree)
+*  setIcon(folderTree)
+*  abelText.equals("Input")
+*  setIcon(folderTree)
+*  labelText.equals("Commonality")
+*  setIcon(folderTree)
+*  analysisNodeTree.size()
+*  abelText.equals(rootTree.getChildAt(0).getChildAt(i).toString())
+*  analysisNodeTree.get(i)
+*  equals("NO")
+*  setIcon(squareRedTree)
+*  abelText.equals(rootTree.getChildAt(0).getChildAt(i).toString())
+*  analysisNodeTree.get(i)
+*  equals("YES")
+*  setIcon(squareGreenTree)
+*  setText(labelText)
+
+Declaration-3)	paint(Graphics g)	CALLS:
+*  g.setColor(c)
+*  g.fillRect(0, 0, getWidth() - 1, getHeight() - 1)
+*  super.paint(g)

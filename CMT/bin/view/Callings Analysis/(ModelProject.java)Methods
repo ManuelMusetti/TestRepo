@@ -1,0 +1,238 @@
+
+Declaration-0)	INIT()	CALLS:
+
+Declaration-1)	run()	CALLS:
+*  String>()
+*  workerProject.size()
+*  workerProject.get(i)
+*  join()
+*  System.out.println("Exception Handler: " + e.getMessage())
+*  fileProject.get(0)
+*  readTermRelevant()
+*  size()
+*  ntersectTermRelevant(fileProject.get(0).readTermRelevant().get(j))
+*  commonalitiesCandidates.add(fileProject.get(0).readTermRelevant().get(j))
+*  commonalitiesCandidates.size()
+*  commonalitiesCandidates.size()
+*  ommonalitiesCandidates.get(i)
+*  equals(commonalitiesCandidates.get(j))
+*  commonalitiesCandidates.remove(j)
+*  setChanged()
+*  notifyObservers("End Extract Commonalities")
+
+Declaration-2)	createProject(String s)	CALLS:
+*  ModelFile>()
+*  Thread>()
+*  File(pathProject)
+*  mkdir()
+
+Declaration-3)	loadProject(String s)	CALLS:
+*  ParserXML()
+*  SAXParserFactory.newInstance()
+*  ModelFile>()
+*  Thread>()
+*  s.substring(0, s.length() - 4)
+*  spf.newSAXParser()
+*  parser.parse(pathXML, parserXML)
+*  ModelFile>()
+*  parserXML.readPathInput()
+*  size()
+*  fileProject.add(
+						new ModelFile(
+								parserXML.readPathInput().get(i), pathProject))
+*  workerProject.add(
+						new Thread(
+								fileProject.get(i)))
+*  String>()
+*  String>()
+*  BufferedReader(
+            				new FileReader(pathCommanalitiesCandidates))
+*  s1 = br1.readLine())
+*  commonalitiesCandidates.add(s1)
+*  BufferedReader(
+            				new FileReader(pathCommanalitiesSelected))
+*  s1 = br2.readLine())
+*  commonalitiesSelected.add(s1)
+*  br1.close()
+*  br2.close()
+*  parserXML.readNameFile()
+*  System.out.println("Exception loadProject: " + e.getMessage())
+*  System.out.println("Exception loadProject: " + e.getMessage())
+*  System.out.println("Exception loadProject: " + e.getMessage())
+
+Declaration-4)	saveProject()	CALLS:
+*  String.valueOf('"')
+*  String.valueOf('"')
+*  String.valueOf('"')
+*  String.valueOf('"')
+*  fileProject.size()
+*  File(fileProject.get(i).readPathFile())
+*  getName()
+*  fileProject.get(i)
+*  readPathFile()
+*  PrintWriter(
+			        		new BufferedWriter(
+			        				new FileWriter(pathXML)))
+*  pw1.print(s)
+*  PrintWriter(
+			        		new BufferedWriter(
+			        				new FileWriter(pathCommanalitiesCandidates)))
+*  commonalitiesCandidates.size()
+*  pw2.print(commonalitiesCandidates.get(i) + "\n")
+*  PrintWriter(
+			        		new BufferedWriter(
+			        				new FileWriter(pathCommanalitiesSelected)))
+*  commonalitiesSelected.size()
+*  pw3.print(commonalitiesSelected.get(i) + "\n")
+*  PrintWriter(
+					new BufferedWriter(
+							new FileWriter(pathCommanalitiesSelectedHTML)))
+*  String.valueOf('"')
+*  String.valueOf('2')
+*  String.valueOf('"')
+*  String.valueOf('"')
+*  String.valueOf('"')
+*  commonalitiesSelected.size()
+*  String.valueOf(i)
+*  commonalitiesSelected.get(i)
+*  pw4.print(s)
+*  pw1.close()
+*  pw2.close()
+*  pw3.close()
+*  pw4.close()
+*  System.out.println("Exception saveProject: " + e.getMessage())
+*  File(pathXML)
+
+Declaration-5)	deleteProject()	CALLS:
+*  File(pathProject)
+*  f1.listFiles()
+*  f2[i].delete()
+*  f1.delete()
+
+Declaration-6)	analyzesFileProject()	CALLS:
+*  fileProject.size()
+*  orkerProject.get(i)
+*  getState()
+*  workerProject.get(i)
+*  start()
+*  workerProject.set(i, new Thread(fileProject.get(i)))
+*  workerProject.get(i)
+*  start()
+*  Thread(this)
+*  handlerProject.start()
+
+Declaration-7)	loadAnalysisFileProject()	CALLS:
+*  String>()
+*  fileProject.size()
+*  File(fileProject.get(i).readPathFileUTF8())
+*  exists()
+*  orkerProject.get(i)
+*  getState()
+*  workerProject.get(i)
+*  start()
+*  al.add(String.valueOf(i))
+*  workerProject.get(i)
+*  join()
+*  System.out.println("Exception loadAnalysisFileProject: " + e.getMessage())
+*  workerProject.set(i, new Thread(fileProject.get(i)))
+*  workerProject.get(i)
+*  start()
+*  al.add(String.valueOf(i))
+*  workerProject.get(i)
+*  join()
+*  System.out.println("Exception loadAnalysisFileProject: " + e.getMessage())
+
+Declaration-8)	addFileProject(String s)	CALLS:
+*  fileProject.add(new ModelFile(s, pathProject))
+*  workerProject.add(
+				new Thread(
+						fileProject.get(fileProject.size()-1)))
+
+Declaration-9)	removeFileProject(int i)	CALLS:
+*  ileProject.get(i)
+*  readPathFileUTF8()
+*  File(fileProject.get(i).readPathFileUTF8())
+*  delete()
+*  ileProject.get(i)
+*  readPathFileHTML()
+*  fileProject.get(i)
+*  readPathFileHTML()
+*  size()
+*  File(fileProject.get(i).readPathFileHTML().get(j))
+*  delete()
+*  File((fileProject.get(i).readPathFileUTF8().substring(0, fileProject.get(i).readPathFileUTF8().length()-4)) + ".log")
+*  exists()
+*  File((fileProject.get(i).readPathFileUTF8().substring(0, fileProject.get(i).readPathFileUTF8().length()-4)) + ".log")
+*  delete()
+*  fileProject.remove(i)
+*  workerProject.remove(i)
+
+Declaration-10)	readAnalysisFile(int i)	CALLS:
+*  fileProject.get(i)
+*  readPathFileUTF8()
+*  ileProject.get(i)
+*  readPathFileHTML()
+*  fileProject.get(i)
+*  readPathFileHTML()
+*  get(1)
+*  fileProject.get(i)
+*  readPathFileHTML()
+*  get(2)
+*  fileProject.get(i)
+*  readPathFileHTML()
+*  get(3)
+
+Declaration-11)	readTermRelevantFile(int i)	CALLS:
+*  fileProject.get(i)
+*  readTermRelevant()
+
+Declaration-12)	readPathHTMLTermRelevantFile()	CALLS:
+*  String>()
+*  fileProject.size()
+*  ileProject.get(i)
+*  readPathFileHTML()
+*  al.add(fileProject.get(i).readPathFileHTML().get(2))
+
+Declaration-13)	readCommonalitiesCandidates()	CALLS:
+
+Declaration-14)	readCommonalitiesSelected()	CALLS:
+
+Declaration-15)	readPathCommanalitiesSelectedHTML()	CALLS:
+
+Declaration-16)	setCommonalitiesSelected(ArrayList <String> al)	CALLS:
+*  String>()
+*  al.size()
+*  commonalitiesSelected.add(al.get(i))
+*  PrintWriter(
+					new BufferedWriter(
+							new FileWriter(pathCommanalitiesSelectedHTML)))
+*  String.valueOf('"')
+*  String.valueOf('2')
+*  String.valueOf('"')
+*  String.valueOf('"')
+*  String.valueOf('"')
+*  commonalitiesSelected.size()
+*  String.valueOf(i+1)
+*  commonalitiesSelected.get(i)
+*  pw.print(s)
+*  pw.close()
+*  setChanged()
+*  notifyObservers("End Commonalities Selected")
+*  System.out.println("Exception readCommonalitiesSelectedFileHTML: " + e.getMessage())
+
+Declaration-17)	readPathCommonalitiesSelectedHTML()	CALLS:
+
+Declaration-18)	readStateProject()	CALLS:
+
+Declaration-19)	intersectTermRelevant(String s)	CALLS:
+*  fileProject.size()
+*  fileProject.get(i)
+*  readTermRelevant()
+*  size()
+*  ileProject.get(i)
+*  readTermRelevant()
+*  get(j)
+*  equals(s)
+*  fileProject.get(i)
+*  readTermRelevant()
+*  size()

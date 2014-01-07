@@ -1,0 +1,77 @@
+
+Declaration-0)	INIT()	CALLS:
+
+Declaration-1)	ControllerProject(ViewProject viewProject, ModelProject modelProject)	CALLS:
+
+Declaration-2)	actionPerformed(ActionEvent ae)	CALLS:
+*  e.getActionCommand()
+*  equals("Create Project")
+*  viewProject.assignNameProjectDialog()
+*  modelProject.createProject(s)
+*  viewProject.errorDialog("Project already exists")
+*  viewProject.loadPanelLateral(s, null)
+*  e.getActionCommand()
+*  equals("Delete Project")
+*  viewProject.deleteProjectDialog()
+*  e.getActionCommand()
+*  equals("Load Project")
+*  viewProject.loadProjectDialog()
+*  viewProject.loadPanelLateral(
+						s.substring(0, s.length() - 4), modelProject.loadProject(s))
+*  e.getActionCommand()
+*  equals("Save Project")
+*  modelProject.saveProject()
+*  e.getActionCommand()
+*  equals("Load File")
+*  viewProject.loadFileDialog()
+*  modelProject.addFileProject(s[1])
+*  e.getActionCommand()
+*  equals("Delete File")
+*  viewProject.deleteFiledDialog()
+*  modelProject.removeFileProject(i)
+*  e.getActionCommand()
+*  equals("Extract Commonality")
+*  viewProject.extractCommonalitiesdDialog()
+*  e.getActionCommand()
+*  equals("OK")
+*  viewProject.showCommonalitiesSelected()
+*  e.getActionCommand()
+*  equals("Exit")
+*  odelProject.readStateProject()
+*  iewProject.saveProjectDialog()
+*  odelProject.readStateProject()
+*  modelProject.deleteProject()
+*  modelProject.saveProject()
+*  viewProject.closeProject()
+
+Declaration-3)	mouseClicked(MouseEvent me)	CALLS:
+*  e.getClickCount()
+*  viewProject.loadPanelCentral()
+
+Declaration-4)	windowClosing(WindowEvent we)	CALLS:
+*  odelProject.readStateProject()
+*  iewProject.saveProjectDialog()
+*  odelProject.readStateProject()
+*  modelProject.deleteProject()
+*  modelProject.saveProject()
+*  viewProject.closeProject()
+
+Declaration-5)	windowActivated(WindowEvent arg0)	CALLS:
+
+Declaration-6)	windowClosed(WindowEvent arg0)	CALLS:
+
+Declaration-7)	windowDeactivated(WindowEvent arg0)	CALLS:
+
+Declaration-8)	windowDeiconified(WindowEvent arg0)	CALLS:
+
+Declaration-9)	windowIconified(WindowEvent arg0)	CALLS:
+
+Declaration-10)	windowOpened(WindowEvent arg0)	CALLS:
+
+Declaration-11)	mouseEntered(MouseEvent arg0)	CALLS:
+
+Declaration-12)	mouseExited(MouseEvent arg0)	CALLS:
+
+Declaration-13)	mousePressed(MouseEvent arg0)	CALLS:
+
+Declaration-14)	mouseReleased(MouseEvent arg0)	CALLS:

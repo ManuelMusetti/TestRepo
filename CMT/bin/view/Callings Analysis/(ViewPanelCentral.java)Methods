@@ -1,0 +1,198 @@
+
+Declaration-0)	INIT()	CALLS:
+*  DefaultHighlighter.DefaultHighlightPainter(Color.YELLOW)
+*  DefaultHighlighter.DefaultHighlightPainter(Color.CYAN)
+
+Declaration-1)	ViewPanelCentral(JButton buttonCommonalitiesEnd)	CALLS:
+*  JPanel()
+*  panelAnalysis.setLayout(null)
+*  panelAnalysis.setBounds(320, 100, 1100, 612)
+
+Declaration-2)	createTabFile(String [] s, ArrayList <String> al)	CALLS:
+*  JTabbedPane()
+*  tabFile.setBounds(0, 0, 1100, 612)
+*  tabFile.addTab("Text to analyze", getTabTextFile(s[0], al))
+*  tabFile.addTab("Sentence splitting", getTabHTMLFile(s[1]))
+*  tabFile.addTab("Term extraction", getTabHTMLFile(s[2]))
+*  tabFile.addTab("Annotation", getTabHTMLFile(s[3]))
+*  panelAnalysis.removeAll()
+*  panelAnalysis.add(tabFile)
+
+Declaration-3)	createTabCommonalities(ArrayList <String> alF, ArrayList <String> alCC, ArrayList <String> alCS, String s)	CALLS:
+*  JTabbedPane()
+*  tabCommonalities[0].setBounds(0, 0, 550, 612)
+*  alF.size()
+*  tabCommonalities[0].add(
+					new File(alF.get(i)).getName().substring(0, new File(alF.get(i)).getName().length() - 6), getTabHTMLFile(alF.get(i)))
+*  JTabbedPane()
+*  tabCommonalities[1].setBounds(550, 0, 550, 612)
+*  tabCommonalities[1].add("Commonality Candidates", getTabCommonalitiesCandidates(alCC, alCS))
+*  tabCommonalities[1].add("Selected Commonality", getTabHTMLFile(s))
+*  panelAnalysis.removeAll()
+*  panelAnalysis.add(tabCommonalities[0])
+*  panelAnalysis.add(tabCommonalities[1])
+
+Declaration-4)	refreshTabCommonalitesSelected(String s)	CALLS:
+*  abCommonalities[1].getTabCount()
+*  tabCommonalities[1].add("Selected Commonality", getTabHTMLFile(s))
+*  tabCommonalities[1].remove(1)
+*  tabCommonalities[1].add("Selected Commonality", getTabHTMLFile(s))
+*  panelAnalysis.removeAll()
+*  panelAnalysis.add(tabCommonalities[0])
+*  panelAnalysis.add(tabCommonalities[1])
+
+Declaration-5)	getPanelAnalysis()	CALLS:
+
+Declaration-6)	getNameCheckBoxCommonalities()	CALLS:
+*  String>()
+*  checkBoxCommonalities.size()
+*  heckBoxCommonalities.get(i)
+*  isSelected()
+*  al.add(checkBoxCommonalities.get(i).getText())
+
+Declaration-7)	getTabTextFile(String s1, ArrayList <String> al)	CALLS:
+*  BufferedReader(
+							new FileReader(s1))
+*  br.readLine()
+*  br.close()
+*  JTextArea(s)
+*  jta.setLineWrap(true)
+*  JScrollPane((JTextArea)setHighlightText(jta, al))
+*  System.out.println("Exception tabTextFile: " + e.getMessage())
+*  System.out.println("Exception tabTextFile: " + e.getMessage())
+
+Declaration-8)	setHighlightText(JTextComponent jtc, ArrayList <String> al)	CALLS:
+*  jtc.getHighlighter()
+*  jtc.getDocument()
+*  doc.getText(0, doc.getLength())
+*  al.size()
+*  text.indexOf(al.get(i), pos)
+*  ext.charAt(pos + al.get(i).length())
+*  text.charAt(pos - 1)
+*  hilite.addHighlight(pos, pos + al.get(i).length(), highlightPainter[0])
+*  al.get(i)
+*  length()
+*  System.out.println("Exception tabTextFile: " + e.getMessage())
+
+Declaration-9)	getTabHTMLFile(String s)	CALLS:
+*  JEditorPane()
+*  ep.setEditorKit(new HTMLEditorKit())
+*  FileReader(s)
+*  ep.read(fr, s)
+*  fr.close()
+*  System.out.println("Exception getTabHTMLFile: " + e.getMessage())
+*  System.out.println("Exception getTabHTMLFile: " + e.getMessage())
+*  JScrollPane(ep)
+
+Declaration-10)	getTabCommonalitiesCandidates(ArrayList <String> alCC, ArrayList <String> alCS)	CALLS:
+*  JPanel()
+*  jpG.setBackground(Color.WHITE)
+*  jpG.setBounds(0, 0, 550, 466)
+*  jpG.setLayout(null)
+*  JPanel()
+*  panelCommonalities.setBackground(Color.WHITE)
+*  panelCommonalities.setBounds(30,30,490,260)
+*  panelCommonalities.setLayout(new GridLayout(0, 1))
+*  panelCommonalities.setBorder(BorderFactory.createCompoundBorder(
+				BorderFactory.createEtchedBorder(EtchedBorder.RAISED), 
+						BorderFactory.createEtchedBorder(EtchedBorder.LOWERED)))
+*  JCheckBox>()
+*  alCC.size()
+*  checkBoxCommonalities.add(new JCheckBox(alCC.get(i)))
+*  checkBoxCommonalities.get(checkBoxCommonalities.size()-1)
+*  setSelected(true)
+*  panelCommonalities.add(checkBoxCommonalities.get(checkBoxCommonalities.size()-1))
+*  alCC.size()
+*  checkBoxCommonalities.add(new JCheckBox(alCC.get(i)))
+*  lCS.contains(alCC.get(i))
+*  checkBoxCommonalities.get(i)
+*  setSelected(true)
+*  checkBoxCommonalities.get(i)
+*  setSelected(false)
+*  panelCommonalities.add(checkBoxCommonalities.get(i))
+*  alCS.size()
+*  alCC.contains(alCS.get(i))
+*  checkBoxCommonalities.add(new JCheckBox(alCS.get(i)))
+*  checkBoxCommonalities.get(checkBoxCommonalities.size()-1)
+*  setSelected(true)
+*  checkBoxCommonalities.get(checkBoxCommonalities.size()-1)
+*  setForeground(Color.RED)
+*  checkBoxCommonalities.get(checkBoxCommonalities.size()-1)
+*  addMouseListener(
+							new MouseAdapter()
+							{			
+									@Override
+									public void mouseClicked(MouseEvent me) 
+									{							
+										if(me.getButton() == 3)
+										{
+											for(int i = 0; i < checkBoxCommonalities.size(); i++)
+											{
+												if(checkBoxCommonalities.get(i).equals(me.getSource()))
+													removeCheckBox(checkBoxCommonalities.get(i).getText());
+											}	
+										}
+									}
+							})
+*  panelCommonalities.add(checkBoxCommonalities.get(checkBoxCommonalities.size()-1))
+*  JScrollPane(panelCommonalities, 
+				   ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+				   ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED)
+*  jsp.setBounds(15,30,490,260)
+*  JLabel("Add term at the commonality candidates:")
+*  jl.setBounds(16, 297, 400, 30)
+*  JTextField()
+*  jtf.setBounds(12, 320, 400, 30)
+*  JButton("Add")
+*  buttonCommonalitiesAdd.setBounds(423, 320, 30, 30)
+*  buttonCommonalitiesAdd.addActionListener(
+				new ActionListener()
+				{
+					@Override
+					public void actionPerformed(ActionEvent arg0) 
+					{
+						addCheckBox(jtf.getText());
+						jtf.setText("");
+					}
+				})
+*  jpG.add(jsp)
+*  jpG.add(jtf)
+*  jpG.add(jl)
+*  jpG.add(buttonCommonalitiesAdd)
+*  jpG.add(buttonCommonalitiesEnd)
+*  JScrollPane(jpG)
+
+Declaration-11)	addCheckBox(String s)	CALLS:
+*  s.trim()
+*  equals("")
+*  checkBoxCommonalities.add(new JCheckBox(s))
+*  checkBoxCommonalities.get(checkBoxCommonalities.size()-1)
+*  setSelected(true)
+*  checkBoxCommonalities.get(checkBoxCommonalities.size()-1)
+*  setForeground(Color.RED)
+*  checkBoxCommonalities.get(checkBoxCommonalities.size()-1)
+*  addMouseListener(
+				new MouseAdapter()
+				{			
+						@Override
+						public void mouseClicked(MouseEvent me) 
+						{							
+							if(me.getButton() == 3)
+							{
+								for(int i = 0; i < checkBoxCommonalities.size(); i++)
+								{
+									if(checkBoxCommonalities.get(i).equals(me.getSource()))
+										removeCheckBox(checkBoxCommonalities.get(i).getText());
+								}	
+							}
+						}
+				})
+*  panelCommonalities.add(checkBoxCommonalities.get(checkBoxCommonalities.size()-1))
+*  panelCommonalities.validate()
+
+Declaration-12)	removeCheckBox(String s)	CALLS:
+*  checkBoxCommonalities.size()
+*  equals(checkBoxCommonalities.get(i).getText())
+*  panelCommonalities.remove(checkBoxCommonalities.get(i))
+*  checkBoxCommonalities.remove(i)
+*  panelCommonalities.validate()
